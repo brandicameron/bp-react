@@ -1,0 +1,88 @@
+$background-color: #f5efef;
+$gradient: linear-gradient(70deg, #ae1216 0%, #e00101 95%);
+$accent-color: #ae1216;
+$focus-color: #196ff1;
+$white: #fff;
+$ht-stage-1: #ef6e00;
+$elevated: #de9b03;
+$text-color: #5e5e5e;
+$text-shadow: 0px 1px 1px #fff, 0 0 0 #000, 0px 1px 1px #fff;
+$light-grey: #d9d9d9;
+$radius: 7px;
+$bold: 800;
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Mukta', sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid $focus-color;
+  padding: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  color: $text-color;
+  font-size: 1.3rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  object-fit: contain;
+}
+
+/*  HELPER CLASSES  */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-h-w {
+  width: 100vw;
+  height: 100vh;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.normal {
+  color: $text-color;
+}
+
+.elevated {
+  color: $elevated;
+}
+
+.stage-1 {
+  color: $ht-stage-1;
+}
+
+.stage-2 {
+  color: $accent-color;
+}

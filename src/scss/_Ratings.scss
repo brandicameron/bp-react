@@ -1,0 +1,26 @@
+.rating-list {
+  @extend .flex;
+  justify-content: space-between;
+  width: 85vw;
+  max-width: 300px;
+  margin: 10px auto 30px auto;
+  padding: 15px 0 10px 0;
+  border-top: 1px dotted $light-grey;
+  border-bottom: 1px dotted $light-grey;
+}
+
+.rating {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.rating-color {
+  font-size: 1rem;
+  line-height: 80%;
+}
+
+@media screen and (max-width: 400px) {
+  .rating-color {
+    margin-bottom: 5px;
+  }
+}

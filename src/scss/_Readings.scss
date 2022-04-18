@@ -1,0 +1,120 @@
+.no-readings {
+  @extend .flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: $accent-color;
+  font-size: clamp(1.7rem, 2vw, 2rem);
+  text-align: center;
+  line-height: 175%;
+  letter-spacing: -0.03rem;
+  width: 85vw;
+  max-width: 300px;
+}
+
+.arrow {
+  width: 40px;
+  margin-top: 20px;
+}
+
+.readings {
+  @extend .flex;
+  flex-direction: column;
+  padding-bottom: 6rem;
+}
+
+.card {
+  position: relative;
+  @extend .flex;
+  justify-content: space-between;
+  width: 85vw;
+  max-width: 300px;
+  padding: 0.5rem 1.5rem 1rem 1.5rem;
+  border-radius: $radius;
+  margin: 10px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25), -6px -6px 12px #fff;
+}
+
+// Hides scrollbar for delete button on mobile
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+.reading,
+.pulse {
+  position: relative;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.pulse {
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.pulse::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/heart.svg);
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  left: -15px;
+  top: 10px;
+}
+
+.date {
+  font-size: 0.85rem;
+  margin-top: -7px;
+  opacity: 0.8;
+}
+
+.trash-icon {
+  width: 20px;
+}
+
+.delete-btn {
+  position: absolute;
+  @extend .flex;
+  top: 0;
+  right: 0;
+  transform: translateX(90px);
+  background-color: $accent-color;
+  height: 100%;
+  width: 90px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 $radius $radius 0;
+  transition: transform 100ms ease;
+}
+
+.delete-btn:hover,
+.pulse:hover + .delete-btn {
+  transform: translateX(0);
+}
+
+// makes delete button retract when not tab focused
+.delete-btn:focus-within {
+  transform: translateX(0);
+}
+
+.delete-slideaway {
+  animation: slideaway 100ms ease 50ms forwards;
+}
+
+@keyframes slideaway {
+  20% {
+    transform: skew(-15deg);
+  }
+  40% {
+    transform: skew(-15deg) translateX(0);
+  }
+  100% {
+    transform: skew(-15deg) translateX(-200vw);
+  }
+}

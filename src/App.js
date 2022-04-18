@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/App.scss';
+import { useUser } from './hooks/useUser';
+import LoginPage from './components/LoginPage';
+import Header from './components/Header';
+import Ratings from './components/Ratings';
+import Readings from './components/Readings';
+import AddReading from './components/AddReading';
 
 function App() {
+  const { loggedIn } = useUser();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      {!loggedIn && <LoginPage />}
+      {loggedIn && (
+        <>
+          <Header />
+          <Ratings />
+          <Readings />
+          <AddReading />
+        </>
+      )}
     </div>
   );
 }
