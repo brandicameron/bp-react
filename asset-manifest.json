@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/bp-react/static/css/main.70c6619d.css",
+    "main.js": "/bp-react/static/js/main.8ac2f7b3.js",
+    "static/media/trash-can.svg": "/bp-react/static/media/trash-can.087512ac3c1ecea412c5d02e7bfb0724.svg",
+    "index.html": "/bp-react/index.html",
+    "static/media/heart.svg": "/bp-react/static/media/heart.d778080af244fe2db8604632798671a0.svg",
+    "static/media/account.svg": "/bp-react/static/media/account.2af96906e9b416f0775cf235dace9495.svg",
+    "static/media/arrow.svg": "/bp-react/static/media/arrow.169e7d0bee7e28a4d40c0269cc695dbf.svg",
+    "main.70c6619d.css.map": "/bp-react/static/css/main.70c6619d.css.map",
+    "main.8ac2f7b3.js.map": "/bp-react/static/js/main.8ac2f7b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70c6619d.css",
+    "static/js/main.8ac2f7b3.js"
+  ]
+}
