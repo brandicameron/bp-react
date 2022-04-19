@@ -20,6 +20,7 @@ export default function Form({ login }) {
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
+  // This captures the user email/password if the browser autofills it
   useEffect(() => {
     setTimeout(() => {
       let email = userEmailRef.current.value;

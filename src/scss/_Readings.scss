@@ -118,3 +118,9 @@
     transform: skew(-15deg) translateX(-200vw);
   }
 }
+
+@media (prefers-reduced-motion) {
+  .delete-slideaway {
+    animation: none;
+  }
+}

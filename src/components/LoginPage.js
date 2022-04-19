@@ -9,8 +9,8 @@ export default function LoginPage() {
   };
 
   return (
-    <section className='login-page'>
-      <div className='form-container'>
+    <main className='login-page'>
+      <section className='form-container'>
         <h1 className='form-title'>{login ? 'Login' : 'Signup'}</h1>
         <div className='toggle'>
           <button
@@ -29,7 +29,7 @@ export default function LoginPage() {
           </button>
         </div>
         <Form login={login} />
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }

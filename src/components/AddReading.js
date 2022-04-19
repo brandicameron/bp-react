@@ -10,19 +10,14 @@ export default function AddReading() {
 
   const { addReading } = useAddReading();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const handleOpenForm = () => {
     setOpenForm((prev) => !prev);
     systolic.current.focus();
   };
 
-  // Scroll window to top on mobile after add reading form closes
   useEffect(() => {
     if (!openForm) {
-      // window.scrollTo(0, 0);
+      // Scrolls window to top on mobile after closing add reading form to show most recent reading
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
       // Close keyboard on mobile when add reading form is lowered
