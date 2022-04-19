@@ -4,14 +4,12 @@ import { useState, useEffect } from 'react';
 
 export const useUser = () => {
   const [userUID, setUserUID] = useState(null);
-  const [userEmail, setUserEmail] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserUID(user.uid);
-        setUserEmail(user.email);
         setLoggedIn(true);
       } else {
         setLoggedIn(false);
@@ -19,5 +17,5 @@ export const useUser = () => {
     });
   }, []);
 
-  return { userUID, userEmail, loggedIn };
+  return { userUID, loggedIn };
 };

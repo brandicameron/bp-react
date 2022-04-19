@@ -7,7 +7,7 @@ import { useForgotPassword } from '../hooks/useForgotPassword';
 export default function Form({ login }) {
   const { loginUser } = useLogin();
   const { loginGuest } = useSignInGuest();
-  const { signUpUser } = useSignUp();
+  const { signUpUser, errorMessage } = useSignUp();
   const { sendPasswordReset, forgotPasswordText } = useForgotPassword();
   const userEmailRef = useRef();
   const userPasswordRef = useRef();
@@ -72,7 +72,10 @@ export default function Form({ login }) {
       />
 
       <p className='message error'>
-        {!login && showMessage && <span>*Password must be at least 6 characters.</span>}
+        {!login && showMessage && !errorMessage && (
+          <span>*Password must be at least 6 characters.</span>
+        )}
+        {!login && errorMessage && <span>{errorMessage}</span>}
         {login && (
           <button onClick={() => sendPasswordReset(inputs.email)} className='message link-button'>
             {forgotPasswordText}
