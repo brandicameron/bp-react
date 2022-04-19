@@ -58,7 +58,7 @@ export default function NewReading() {
 
   const handleInputChange = (e) => {
     const name = e.target.name;
-    const value = e.target.value;
+    const value = parseInt(e.target.value);
     const date = new Date();
     const month = date.toLocaleString('default', { month: 'short' });
     const day = date.getDate();

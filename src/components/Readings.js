@@ -17,8 +17,8 @@ export default function Readings() {
       } else if (userReadings.length > 0) {
         setNoReadings(false);
         setLastReading({
-          systolic: parseInt(userReadings[0].sys),
-          diastolic: parseInt(userReadings[0].dia),
+          systolic: userReadings[0].sys,
+          diastolic: userReadings[0].dia,
         });
       }
     }
