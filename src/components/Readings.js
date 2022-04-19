@@ -4,14 +4,16 @@ import Arrow from '../images/arrow.svg';
 import Reading from './Reading';
 
 export default function Readings() {
-  const [noReadings, setNoReadings] = useState(true);
+  const [noReadings, setNoReadings] = useState(false);
   const { userReadings } = useReadings();
 
   useEffect(() => {
-    if (userReadings.length === 0) {
-      setNoReadings(true);
-    } else if (userReadings.length > 0) {
-      setNoReadings(false);
+    if (userReadings !== null) {
+      if (userReadings.length === 0) {
+        setNoReadings(true);
+      } else if (userReadings.length > 0) {
+        setNoReadings(false);
+      }
     }
   }, [userReadings]);
 
@@ -24,7 +26,7 @@ export default function Readings() {
         </section>
       )}
       <ul className='readings'>
-        {userReadings.map((reading) => (
+        {userReadings?.map((reading) => (
           <Reading reading={reading} key={reading.id} />
         ))}
       </ul>

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 export const useReadings = () => {
   const { userUID } = useUser();
-  const [userReadings, setUserReadings] = useState([]);
+  const [userReadings, setUserReadings] = useState(null);
 
   useEffect(() => {
     if (userUID) {

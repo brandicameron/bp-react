@@ -10,7 +10,7 @@ function App() {
   const { loggedIn } = useUser();
 
   return (
-    <div className='App'>
+    <>
       {!loggedIn && <LoginPage />}
       {loggedIn && (
         <>
@@ -20,7 +20,7 @@ function App() {
           <AddReading />
         </>
       )}
-    </div>
+    </>
   );
 }
 

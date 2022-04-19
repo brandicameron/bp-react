@@ -39,8 +39,13 @@ export default function Reading({ reading }) {
         </p>
       </div>
       <h3 className='pulse'>{reading.pulse}</h3>
-      <button className='delete-btn' id={`${reading.id}`} onClick={handleDelete}>
-        <img className='trash-icon' src={TrashCan} alt='Delete Reading' />
+      <button
+        className='delete-btn'
+        id={`${reading.id}`}
+        onClick={handleDelete}
+        aria-label='Delete reading.'
+      >
+        <img className='trash-icon' src={TrashCan} alt='' />
       </button>
     </li>
   );
