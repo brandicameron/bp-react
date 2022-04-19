@@ -4,11 +4,31 @@ import { useAddReading } from '../hooks/useAddReading';
 export default function AddReading() {
   const [readingInputs, setReadingInputs] = useState({});
   const [openForm, setOpenForm] = useState(false);
+  const [systolicMaxLength, setSystolicMaxLength] = useState(3);
+  const [diastolicMaxLength, setDiastolicMaxLength] = useState(2);
   const systolic = useRef();
   const diastolic = useRef();
   const pulse = useRef();
-
   const { addReading } = useAddReading();
+
+  // Auto-tab assist
+  const determineMaxLengthForInputs = (e) => {
+    if (e.target.name === 'systolic') {
+      if (parseInt(e.target.value[0]) > 1) {
+        setSystolicMaxLength(2);
+      } else {
+        setSystolicMaxLength(3);
+      }
+    }
+
+    if (e.target.name === 'diastolic') {
+      if (parseInt(e.target.value[0]) === 1) {
+        setDiastolicMaxLength(3);
+      } else {
+        setDiastolicMaxLength(2);
+      }
+    }
+  };
 
   const handleOpenForm = () => {
     setOpenForm((prev) => !prev);
@@ -28,6 +48,8 @@ export default function AddReading() {
   }, [openForm]);
 
   const handleChange = (e) => {
+    determineMaxLengthForInputs(e);
+
     const name = e.target.name;
     const value = e.target.value;
 
@@ -44,10 +66,10 @@ export default function AddReading() {
     setReadingInputs((values) => ({ ...values, [name]: value, month, day, year, time }));
 
     // auto tab to next input once maxLength is reached
-    if (e.target.name === 'systolic' && e.target.value.length === e.target.maxLength) {
+    if (name === 'systolic' && value.length === e.target.maxLength) {
       diastolic.current.focus();
     }
-    if (e.target.name === 'diastolic' && e.target.value.length === e.target.maxLength) {
+    if (name === 'diastolic' && value.length === e.target.maxLength) {
       pulse.current.focus();
     }
   };
@@ -81,7 +103,7 @@ export default function AddReading() {
               type='tel'
               name='systolic'
               value={readingInputs.systolic || ''}
-              maxlength='3'
+              maxlength={systolicMaxLength}
               onChange={handleChange}
               ref={systolic}
             ></input>
@@ -94,7 +116,7 @@ export default function AddReading() {
               type='tel'
               name='diastolic'
               value={readingInputs.diastolic || ''}
-              maxlength='2'
+              maxlength={diastolicMaxLength}
               onChange={handleChange}
               ref={diastolic}
             ></input>

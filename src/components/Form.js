@@ -14,12 +14,6 @@ export default function Form({ login }) {
   const [inputs, setInputs] = useState({});
   const [showMessage, setShowMessage] = useState(true);
 
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
-
   // This captures the user email/password if the browser autofills it
   useEffect(() => {
     setTimeout(() => {
@@ -28,15 +22,6 @@ export default function Form({ login }) {
       setInputs({ email: email, password: password });
     }, 100);
   }, []);
-
-  const handleSubmit = (e, email, password) => {
-    e.preventDefault();
-    if (login) {
-      loginUser(email, password);
-    } else {
-      signUpUser(email, password);
-    }
-  };
 
   // show/hide password length requirement message
   useEffect(() => {
@@ -49,6 +34,21 @@ export default function Form({ login }) {
       }
     }
   }, [inputs.password]);
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setInputs((values) => ({ ...values, [name]: value }));
+  };
+
+  const handleSubmit = (e, email, password) => {
+    e.preventDefault();
+    if (login) {
+      loginUser(email, password);
+    } else {
+      signUpUser(email, password);
+    }
+  };
 
   return (
     <form onSubmit={(e) => handleSubmit(e, inputs.email, inputs.password)}>
