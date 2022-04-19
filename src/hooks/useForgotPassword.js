@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { useState } from 'react';
 
 export const useForgotPassword = () => {
   const [forgotPasswordText, setForgotPasswordText] = useState('Forgot password?');

@@ -1,6 +1,6 @@
 import { db } from '../firebase/config';
-import { useUser } from '../hooks/useUser';
 import { doc, deleteDoc } from 'firebase/firestore';
+import { useUser } from '../hooks/useUser';
 
 export const useDeleteReading = () => {
   const { userUID } = useUser();

@@ -1,14 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { useAddReading } from '../hooks/useAddReading';
 
-export default function AddReading() {
+export default function NewReading() {
+  const systolic = useRef();
+  const diastolic = useRef();
+  const pulse = useRef();
   const [readingInputs, setReadingInputs] = useState({});
   const [openForm, setOpenForm] = useState(false);
   const [systolicMaxLength, setSystolicMaxLength] = useState(3);
   const [diastolicMaxLength, setDiastolicMaxLength] = useState(2);
-  const systolic = useRef();
-  const diastolic = useRef();
-  const pulse = useRef();
   const { addReading } = useAddReading();
 
   // Auto-tab assist

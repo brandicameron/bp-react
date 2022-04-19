@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from './Form';
+import LoginForm from './LoginForm';
 import ToggleButton from './ToggleButton';
 
 export default function LoginPage() {
@@ -17,7 +17,7 @@ export default function LoginPage() {
           <ToggleButton login={login} label='Login' handleToggle={handleToggle} />
           <ToggleButton login={!login} label='Signup' handleToggle={handleToggle} />
         </div>
-        <Form login={login} />
+        <LoginForm login={login} />
       </section>
     </main>
   );

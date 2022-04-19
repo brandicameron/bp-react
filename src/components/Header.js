@@ -1,6 +1,6 @@
+import { useLogout } from '../hooks/useLogout';
 import Logo from '../images/heart.svg';
 import AccountIcon from '../images/account.svg';
-import { useLogout } from '../hooks/useLogout';
 
 export default function Header() {
   const { logoutUser } = useLogout();

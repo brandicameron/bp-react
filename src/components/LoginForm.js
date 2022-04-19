@@ -4,15 +4,15 @@ import { useSignInGuest } from '../hooks/useSignInGuest';
 import { useSignUp } from '../hooks/useSignUp';
 import { useForgotPassword } from '../hooks/useForgotPassword';
 
-export default function Form({ login }) {
-  const { loginUser } = useLogin();
-  const { loginGuest } = useSignInGuest();
-  const { signUpUser, errorMessage } = useSignUp();
-  const { sendPasswordReset, forgotPasswordText } = useForgotPassword();
+export default function LoginForm({ login }) {
   const userEmailRef = useRef();
   const userPasswordRef = useRef();
   const [inputs, setInputs] = useState({});
   const [showMessage, setShowMessage] = useState(true);
+  const { loginUser } = useLogin();
+  const { loginGuest } = useSignInGuest();
+  const { signUpUser, errorMessage } = useSignUp();
+  const { sendPasswordReset, forgotPasswordText } = useForgotPassword();
 
   // This captures the user email/password if the browser autofills it
   useEffect(() => {

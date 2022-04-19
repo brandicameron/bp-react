@@ -3,7 +3,7 @@ import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import { useUser } from './useUser';
 import { useState, useEffect } from 'react';
 
-export const useReadings = () => {
+export const useReadingData = () => {
   const { userUID } = useUser();
   const [userReadings, setUserReadings] = useState(null);
 

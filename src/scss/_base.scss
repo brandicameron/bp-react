@@ -86,3 +86,12 @@ img {
 .stage-2 {
   color: $accent-color;
 }
+
+.ht-crisis {
+  background-color: $accent-color;
+  color: $white;
+  line-height: 100%;
+  padding: 0.2rem 0;
+  border-radius: $radius;
+  margin-bottom: 5px;
+}

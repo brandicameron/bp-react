@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import TrashCan from '../images/trash-can.svg';
 import { useDeleteReading } from '../hooks/useDeleteReading';
+import TrashCan from '../images/trash-can.svg';
 
 export default function Reading({ reading }) {
   const [animate, setAnimate] = useState(false);
@@ -8,7 +8,7 @@ export default function Reading({ reading }) {
 
   function bpColorRating(systolic, diastolic) {
     if (systolic >= 180 || diastolic >= 120) {
-      console.log('Make Danger Modal');
+      return 'ht-crisis';
     } else if (systolic >= 140 || diastolic >= 90) {
       return 'stage-2';
     } else if (systolic >= 130 || diastolic >= 80) {

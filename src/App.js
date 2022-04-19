@@ -4,7 +4,7 @@ import LoginPage from './components/LoginPage';
 import Header from './components/Header';
 import Ratings from './components/Ratings';
 import Readings from './components/Readings';
-import AddReading from './components/AddReading';
+import NewReading from './components/NewReading';
 
 function App() {
   const { loggedIn } = useUser();
@@ -17,7 +17,7 @@ function App() {
           <Header />
           <Ratings />
           <Readings />
-          <AddReading />
+          <NewReading />
         </>
       )}
     </>
