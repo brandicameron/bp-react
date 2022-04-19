@@ -1,0 +1,35 @@
+.splash-page {
+  @extend .full-h-w;
+  @extend .flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: $accent-color;
+  z-index: 1000;
+}
+
+.splash-heart {
+  width: 90vw;
+  max-width: 500px;
+  animation: heartbeat 2s ease 400ms infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  10%,
+  20% {
+    transform: scale(1);
+  }
+  5%,
+  15% {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .splash-heart {
+    margin-top: -10vh;
+  }
+}
