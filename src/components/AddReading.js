@@ -30,6 +30,15 @@ export default function AddReading() {
     }
   };
 
+  const autoTabAfterMaxLength = (e) => {
+    if (e.target.name === 'systolic' && e.target.value.length === e.target.maxLength) {
+      diastolic.current.focus();
+    }
+    if (e.target.name === 'diastolic' && e.target.value.length === e.target.maxLength) {
+      pulse.current.focus();
+    }
+  };
+
   const handleOpenForm = () => {
     setOpenForm((prev) => !prev);
     systolic.current.focus();
@@ -37,22 +46,19 @@ export default function AddReading() {
 
   useEffect(() => {
     if (!openForm) {
-      // Scrolls window to top on mobile after closing add reading form to show most recent reading
+      // Scrolls window to top (for mobile) after closing form to show most recent reading
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Close keyboard on mobile when add reading form is lowered
+      // Closes keyboard on mobile when form is lowered
       systolic.current.blur();
       diastolic.current.blur();
       pulse.current.blur();
     }
   }, [openForm]);
 
-  const handleChange = (e) => {
-    determineMaxLengthForInputs(e);
-
+  const handleInputChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
     const date = new Date();
     const month = date.toLocaleString('default', { month: 'short' });
     const day = date.getDate();
@@ -63,15 +69,9 @@ export default function AddReading() {
       hour12: true,
     });
 
+    determineMaxLengthForInputs(e);
+    autoTabAfterMaxLength(e);
     setReadingInputs((values) => ({ ...values, [name]: value, month, day, year, time }));
-
-    // auto tab to next input once maxLength is reached
-    if (name === 'systolic' && value.length === e.target.maxLength) {
-      diastolic.current.focus();
-    }
-    if (name === 'diastolic' && value.length === e.target.maxLength) {
-      pulse.current.focus();
-    }
   };
 
   const handleAddNewReading = (e) => {
@@ -104,7 +104,7 @@ export default function AddReading() {
               name='systolic'
               value={readingInputs.systolic || ''}
               maxlength={systolicMaxLength}
-              onChange={handleChange}
+              onChange={handleInputChange}
               ref={systolic}
             ></input>
           </label>
@@ -117,7 +117,7 @@ export default function AddReading() {
               name='diastolic'
               value={readingInputs.diastolic || ''}
               maxlength={diastolicMaxLength}
-              onChange={handleChange}
+              onChange={handleInputChange}
               ref={diastolic}
             ></input>
           </label>
@@ -126,9 +126,9 @@ export default function AddReading() {
             <input
               className='add-reading-input'
               type='tel'
-              value={readingInputs.pulse || ''}
               name='pulse'
-              onChange={handleChange}
+              value={readingInputs.pulse || ''}
+              onChange={handleInputChange}
               ref={pulse}
             ></input>
           </label>

@@ -5,8 +5,7 @@ import { useLogout } from '../hooks/useLogout';
 export default function Header() {
   const { logoutUser } = useLogout();
 
-  const handleLogout = (e) => {
-    e.preventDefault();
+  const handleLogout = () => {
     logoutUser();
   };
 
