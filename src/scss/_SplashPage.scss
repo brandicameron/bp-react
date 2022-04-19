@@ -28,6 +28,12 @@
   }
 }
 
+@media (prefers-reduced-motion) {
+  .splash-heart {
+    animation: none;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .splash-heart {
     margin-top: -10vh;
