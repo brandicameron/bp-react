@@ -93,14 +93,17 @@
   transition: transform 100ms ease;
 }
 
-.delete-btn:hover,
-.pulse:hover + .delete-btn {
-  transform: translateX(0);
-}
+// only does hover effect on devices with mouse - which also prevents the weird issue with delete button showing on next item after deletion on mobile
+@media not all and (hover: none) {
+  .delete-btn:hover,
+  .pulse:hover + .delete-btn {
+    transform: translateX(0);
+  }
 
-// makes delete button retract when not tab focused
-.delete-btn:focus-within {
-  transform: translateX(0);
+  // makes delete button retract when not tab focused
+  .delete-btn:focus-within {
+    transform: translateX(0);
+  }
 }
 
 .delete-slideaway {
@@ -122,5 +125,16 @@
 @media (prefers-reduced-motion) {
   .delete-slideaway {
     animation: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .card {
+    scroll-snap-type: x proximity;
+  }
+
+  .reading,
+  .delete-btn {
+    scroll-snap-align: end;
   }
 }
