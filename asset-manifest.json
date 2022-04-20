@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/bp-react/static/css/main.3ecd56f8.css",
-    "main.js": "/bp-react/static/js/main.eb39cdb5.js",
+    "main.css": "/bp-react/static/css/main.4a1e4e71.css",
+    "main.js": "/bp-react/static/js/main.9146be5e.js",
     "index.html": "/bp-react/index.html",
     "static/media/splash-heart.svg": "/bp-react/static/media/splash-heart.f2041d76a73a8a1808287661bc6d19d9.svg",
     "static/media/trash-can.svg": "/bp-react/static/media/trash-can.087512ac3c1ecea412c5d02e7bfb0724.svg",
     "static/media/heart.svg": "/bp-react/static/media/heart.d778080af244fe2db8604632798671a0.svg",
     "static/media/account.svg": "/bp-react/static/media/account.2af96906e9b416f0775cf235dace9495.svg",
     "static/media/arrow.svg": "/bp-react/static/media/arrow.169e7d0bee7e28a4d40c0269cc695dbf.svg",
-    "main.3ecd56f8.css.map": "/bp-react/static/css/main.3ecd56f8.css.map",
-    "main.eb39cdb5.js.map": "/bp-react/static/js/main.eb39cdb5.js.map"
+    "main.4a1e4e71.css.map": "/bp-react/static/css/main.4a1e4e71.css.map",
+    "main.9146be5e.js.map": "/bp-react/static/js/main.9146be5e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ecd56f8.css",
-    "static/js/main.eb39cdb5.js"
+    "static/css/main.4a1e4e71.css",
+    "static/js/main.9146be5e.js"
   ]
 }
