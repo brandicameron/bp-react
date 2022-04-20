@@ -14,7 +14,7 @@ export default function LoginForm({ login }) {
   const { signUpUser, errorMessage } = useSignUp();
   const { sendPasswordReset, forgotPasswordText } = useForgotPassword();
 
-  // This captures the user email/password if the browser autofills it
+  // Capture the user email/password if the browser autofills it
   useEffect(() => {
     setTimeout(() => {
       let email = userEmailRef.current.value;
@@ -23,7 +23,7 @@ export default function LoginForm({ login }) {
     }, 100);
   }, []);
 
-  // show/hide password length requirement message
+  // Show/hide password length requirement message
   useEffect(() => {
     setShowMessage(true);
     if (inputs.password) {

@@ -34,6 +34,11 @@
   display: none;
 }
 
+// .account-icon:focus ~ .logout-btn,
+// .logout-btn:focus {
+//   display: block;
+// }
+
 .logout-btn::before {
   position: absolute;
   left: 43%;
