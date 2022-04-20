@@ -84,7 +84,12 @@ export default function LoginForm({ login }) {
       </p>
 
       <input className='submit-btn' type='submit' value={login ? 'Login' : 'Signup'} />
-      <button onClick={loginGuest} className='message link-button'>
+      {/* uses visiblity styles so the button can hide on signup page & still retain space */}
+      <button
+        onClick={loginGuest}
+        className='submit-btn'
+        style={login ? { visibility: 'visible' } : { visibility: 'hidden' }}
+      >
         or Enter as Guest
       </button>
     </form>
