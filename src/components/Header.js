@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className='header'>
-      <a href='/'>
+      <a href='https://brandicameron.github.io/bp-react/'>
         <img src={Logo} width='30' height='30' alt='Go back home.' />
       </a>
       <h1 className='title'>Blood Pressure Readings</h1>
