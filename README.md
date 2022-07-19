@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Blood Pressure Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VIEW LIVE: [https://brandicameron.github.io/bp-react/](https://brandicameron.github.io/bp-react/)
 
-## Available Scripts
+![App Screenshot](/src/images/bp-iphone.png)
 
-In the project directory, you can run:
+My second React project was a bit more sensible and I really got to see where components shine. You can instantly sign in as a guest, [so give it a try](https://brandicameron.github.io/bp-react/)!
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Things Learned:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- I enjoyed figuring out how to make the inputs jump autofocus to the next input when adding readings, which makes the form MUCH nicer to use. There is conditional logic that determines when a jump in focus is needed depending on if the Systolic/Diastolic reading is two digits or three.
 
-### `npm test`
+- This project was originally built in vanilla javaScript with Firebase 8. There were some big changes with Firebase 9 so it was nice to get to work with it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- More opportunities to work with useState, useEffect and custom hooks.
 
-### `npm run build`
+- First time incorporating Sass in a react project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Was interesting getting the "slide to reveal delete button" on touch devices working smoothly. (the delete button is on hover for desktop)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## To Do:
 
-### `npm run eject`
+- Not a lot I'd like to add here, this was intended to be a simple app that does one simple thing, but does it well. I don't feel the need to get fancy with it.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Brandi Cameron
 
-## Learn More
+[hello@brandicameron.com](mailto:hello@brandicameron.com)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[www.brandicameron.com](https://brandicameron.com/)
