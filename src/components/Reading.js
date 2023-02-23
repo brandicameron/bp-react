@@ -11,9 +11,9 @@ export default function Reading({ reading }) {
       return 'ht-crisis';
     } else if (systolic >= 140 || diastolic >= 90) {
       return 'stage-2';
-    } else if (systolic >= 130 || diastolic >= 80) {
+    } else if (systolic >= 130 || diastolic > 80) {
       return 'stage-1';
-    } else if (systolic >= 120 || diastolic >= 80) {
+    } else if (systolic > 120 && diastolic < 80) {
       return 'elevated';
     } else {
       return 'normal';
