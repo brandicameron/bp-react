@@ -1,19 +1,46 @@
+.rating-description {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150px);
+  width: 95vw;
+  max-width: 330px;
+  text-align: center;
+  background-color: $text-color;
+  color: $white;
+  padding: 0.75rem 0;
+  border-radius: 3rem;
+  font-size: 1.1rem;
+  transition: transform 150ms ease-in-out;
+}
+
+.show-description {
+  transform: translateX(-50%) translateY(0);
+}
+
+.label {
+  display: block;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
 .rating-list {
   @extend .flex;
-  justify-content: space-between;
-  width: 85vw;
+  justify-content: space-around;
+  width: 90vw;
   max-width: 300px;
   margin: 10px auto 30px auto;
   padding: 15px 0 10px 0;
-  border-top: 1px dotted $light-grey;
-  border-bottom: 1px dotted $light-grey;
+  border-block: 1px dotted $light-grey;
 }
 
-.rating {
+.rating button {
   @extend .flex;
   flex-direction: column;
   font-size: 1rem;
   line-height: 80%;
+  color: inherit;
+  white-space: nowrap;
 }
 
 .rating span {
