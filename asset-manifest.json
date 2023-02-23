@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bp-react/static/css/main.bd296fc2.css",
-    "main.js": "/bp-react/static/js/main.0e071b05.js",
+    "main.js": "/bp-react/static/js/main.293b75e7.js",
     "index.html": "/bp-react/index.html",
     "static/media/splash-heart.svg": "/bp-react/static/media/splash-heart.f2041d76a73a8a1808287661bc6d19d9.svg",
     "static/media/trash-can.svg": "/bp-react/static/media/trash-can.087512ac3c1ecea412c5d02e7bfb0724.svg",
@@ -9,10 +9,10 @@
     "static/media/account.svg": "/bp-react/static/media/account.2af96906e9b416f0775cf235dace9495.svg",
     "static/media/arrow.svg": "/bp-react/static/media/arrow.169e7d0bee7e28a4d40c0269cc695dbf.svg",
     "main.bd296fc2.css.map": "/bp-react/static/css/main.bd296fc2.css.map",
-    "main.0e071b05.js.map": "/bp-react/static/js/main.0e071b05.js.map"
+    "main.293b75e7.js.map": "/bp-react/static/js/main.293b75e7.js.map"
   },
   "entrypoints": [
     "static/css/main.bd296fc2.css",
-    "static/js/main.0e071b05.js"
+    "static/js/main.293b75e7.js"
   ]
 }
